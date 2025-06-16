@@ -1,0 +1,236 @@
+/* Base styles for Contact section */
+.contact {
+  padding: 6rem 1rem;
+  background: var(--manga-white);
+  position: relative;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border: 3px solid var(--manga-black);
+  box-shadow: 8px 8px 0 var(--manga-accent);
+  position: relative;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--manga-black);
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 var(--manga-accent);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--manga-black);
+  background: white;
+  font-size: 1rem;
+  transform: skew(-2deg);
+  box-shadow: 4px 4px 0 var(--manga-accent);
+  color: var(--manga-black);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  transform: skew(-2deg) scale(1.01);
+  box-shadow: 6px 6px 0 var(--manga-accent);
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 1rem 2rem;
+  background: var(--manga-accent);
+  color: white;
+  border: 2px solid var(--manga-black);
+  font-size: 1.1rem;
+  font-weight: bold;
+  transform: skew(-5deg);
+  box-shadow: 4px 4px 0 var(--manga-black);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: skew(-5deg) translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--manga-black);
+}
+
+.status-message {
+  text-align: center;
+  font-weight: bold;
+  transform: skew(-2deg);
+  padding: 0.5rem;
+}
+
+.status-success {
+  color: #4CAF50;
+}
+
+.status-error {
+  color: #f44336;
+}
+
+.contact-info {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  color: var(--manga-black);
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: scale(1.05);
+  color: var(--manga-accent);
+}
+
+/* Responsive styles */
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .contact-container {
+    padding: 3.5rem;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .contact-container {
+    max-width: 750px;
+  }
+  
+  .contact-title {
+    font-size: 2.3rem;
+  }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .contact {
+    padding: 5rem 1rem;
+  }
+  
+  .contact-container {
+    max-width: 700px;
+    padding: 2.5rem;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-input {
+    padding: 0.9rem;
+  }
+  
+  .submit-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .contact {
+    padding: 4rem 1rem;
+  }
+  
+  .contact-container {
+    padding: 2rem;
+    max-width: 540px;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-input {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .submit-button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* Small Mobile (below 576px) */
+@media (max-width: 575px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+  
+  .contact-container {
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0 var(--manga-accent);
+  }
+  
+  .contact-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    text-shadow: 2px 2px 0 var(--manga-accent);
+  }
+  
+  .contact-form {
+    gap: 1.2rem;
+  }
+  
+  .form-input {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    box-shadow: 3px 3px 0 var(--manga-accent);
+  }
+  
+  .submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    box-shadow: 3px 3px 0 var(--manga-black);
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-link {
+    font-size: 0.9rem;
+  }
+}
